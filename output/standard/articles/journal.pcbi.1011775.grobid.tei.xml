@@ -1,0 +1,2142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Inferring country-specific import risk of diseases from the world air transportation network</title>
+				<funder ref="#_sPEz7nq">
+					<orgName type="full">Carlsberg Foundation</orgName>
+				</funder>
+				<funder ref="#_jTeG8cG">
+					<orgName type="full">Joachim Herz Stiftung</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Germany&apos;s Federal Ministry of Health</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-01-24">January 24, 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Pascal</forename><forename type="middle">P</forename><surname>Klamser</surname></persName>
+							<idno type="ORCID">0000-0003-2208-4391</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Adrian</forename><surname>Zachariae</surname></persName>
+							<idno type="ORCID">0000-0001-9780-4651</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Benjamin</forename><forename type="middle">F</forename><surname>Maier</surname></persName>
+							<idno type="ORCID">0000-0001-7414-8823</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<orgName type="department">DTU Compute</orgName>
+								<orgName type="institution">Technical University of Denmark</orgName>
+								<address>
+									<settlement>Kongens Lyngby</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Copenhagen Center for Social Data Science</orgName>
+								<orgName type="institution">University of Copenhagen</orgName>
+								<address>
+									<settlement>Copenhagen</settlement>
+									<country key="DK">Denmark</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Olga</forename><surname>Baranov</surname></persName>
+							<affiliation key="aff4">
+								<orgName type="department">Division of Infectious Diseases and Tropical Medicine</orgName>
+								<orgName type="institution" key="instit1">University Hospital</orgName>
+								<orgName type="institution" key="instit2">LMU Munich</orgName>
+								<address>
+									<settlement>Munich</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff5">
+								<orgName type="department">German Center for Infection Research (DZIF)</orgName>
+								<address>
+									<addrLine>Partner Site Munich</addrLine>
+									<settlement>Munich</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Clara</forename><surname>Jongen</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Frank</forename><surname>Schlosser</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Dirk</forename><surname>Brockmann</surname></persName>
+							<email>dirk.brockmann@tu-dresden.de</email>
+							<idno type="ORCID">0000-0001-5708-2922</idno>
+							<affiliation key="aff0">
+								<orgName type="department" key="dep1">Department of Biology</orgName>
+								<orgName type="department" key="dep2">Institute for Theoretical Biology</orgName>
+								<orgName type="institution">Humboldt-Universita ¨t zu Berlin</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution">Robert Koch Institute</orgName>
+								<address>
+									<settlement>Berlin</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff6">
+								<orgName type="department" key="dep1">Center Synergy of Systems (SynoSys)</orgName>
+								<orgName type="department" key="dep2">Center for Interdisciplinary Digital Sciences</orgName>
+								<orgName type="institution">Technische Universita ¨t Dresden</orgName>
+								<address>
+									<settlement>Dresden</settlement>
+									<country key="DE">Germany</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff7">
+								<orgName type="institution" key="instit1">University of Zaragoza</orgName>
+								<orgName type="institution" key="instit2">Universidad de Zaragoza</orgName>
+								<address>
+									<country key="ES">SPAIN</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Inferring country-specific import risk of diseases from the world air transportation network</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-01-24">January 24, 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4DB9D97FD808552F0A97ED48C1A8F088</idno>
+					<idno type="DOI">10.1371/journal.pcbi.1011775</idno>
+					<note type="submission">Received: May 3, 2023 Accepted: December 21, 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2-SNAPSHOT" ident="GROBID" when="2025-02-25T08:00+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Disease propagation between countries strongly depends on their effective distance, a measure derived from the world air transportation network (WAN). It reduces the complex spreading patterns of a pandemic to a wave-like propagation from the outbreak country, establishing a linear relationship to the arrival time of the unmitigated spread of a disease. However, in the early stages of an outbreak, what concerns decision-makers in countries is understanding the relative risk of active cases arriving in their country-essentially, the likelihood that an active case boarding an airplane at the outbreak location will reach them. While there are data-fitted models available to estimate these risks, accurate mechanistic, parameter-free models are still lacking. Therefore, we introduce the 'import risk' model in this study, which defines import probabilities using the effective-distance framework. The model assumes that airline passengers are distributed along the shortest path tree that starts at the outbreak's origin. In combination with a random walk, we account for all possible paths, thus inferring predominant connecting flights. Our model outperforms other mobility models, such as the radiation and gravity model with varying distance types, and it improves further if additional geographic information is included. The import risk model's precision increases for countries with stronger connections within the WAN, and it reveals a geographic distance dependence that implies a pull-rather than a push-dynamic in the distribution process.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>The recent decades have seen a considerable increase in mobility: The worldwide number of passenger cars in use increased by an average of about 4% each year between 2006 and 2015, reaching approximately 1 billion in 2015 <ref type="bibr" target="#b0">[1]</ref>. This growth is comparable to the yearly increase in the number of sea containers shipped <ref type="bibr" target="#b1">[2]</ref>, and the global scheduled air passenger count also experienced an annual growth of about 6% between 2004 and 2019 <ref type="bibr" target="#b2">[3]</ref> In essence, the world is becoming increasingly interconnected in terms of passenger mobility, both on a small scale (cars) and a large scale (air traffic), as well as in the import and export of goods. This heightened connectivity facilitates the distribution of goods and people, as demonstrated by the distribution of over 400 invasive species through agricultural imports, which is best predicted by the global trade network <ref type="bibr" target="#b3">[4]</ref>. A prime example of unwanted side effects of well-connected regions is the potential for pandemics, accompanied by death, economic damage and the potential stigmatization of survivors, migrants and minorities <ref type="bibr" target="#b4">[5]</ref><ref type="bibr" target="#b5">[6]</ref><ref type="bibr" target="#b6">[7]</ref>. Already the first plague pandemic that started AD 541 in the Nile Delta of Egypt spread in 8 years across the territories (Mediterranean, Northern Europe and Near East) of 2 affected empires because of the intense commerce in the Roman Empire <ref type="bibr" target="#b5">[6]</ref>. Nowadays, the intensified exchange reduces the time until a pandemic reaches all parts of the world to months as for the 2009 H1N1 virus that spread from Mexico in 5 months to all continents <ref type="bibr" target="#b7">[8,</ref><ref type="bibr" target="#b8">9]</ref> or the recent COVID-19 pandemic whose variants spread within a few months across the globe <ref type="bibr" target="#b9">[10]</ref><ref type="bibr" target="#b10">[11]</ref><ref type="bibr" target="#b11">[12]</ref><ref type="bibr" target="#b12">[13]</ref>.</p><p>The connection strength between world regions is only partly explained by their geographic proximity. Instead, due to historic geopolitical relations <ref type="bibr" target="#b13">[14,</ref><ref type="bibr" target="#b14">15]</ref> pandemics spread rather along an effective distance that is derived from the world air transportation network (WAN) <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>, or, if applied on a smaller scale, also from other means of transportation <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b19">20]</ref>. According to the effective distance, region B is closest to region A if the passenger flow from A to B is greater than to other destinations. An intriguing extension is the multipath effective distance, which enhances the prediction of disease arrival times by considering all paths taken by a random walker on the WAN <ref type="bibr" target="#b16">[17]</ref>. The effective distance is regularly used to analyze the impact of mobility on the spread of diseases, as for example for MERS <ref type="bibr" target="#b20">[21]</ref>, Ebola <ref type="bibr" target="#b21">[22]</ref>, Zika <ref type="bibr" target="#b22">[23]</ref> and most recently COVID-19 <ref type="bibr" target="#b19">[20,</ref><ref type="bibr" target="#b23">[24]</ref><ref type="bibr" target="#b24">[25]</ref><ref type="bibr" target="#b25">[26]</ref>. While it enables a qualitative estimation of disease arrival times, its applicability is severely restricted when it comes to describing the importation of infected passengers from a specific source to a target. However, these import events are highly relevant for political decision-makers and to enable modeling predictions.</p><p>In this work, we describe these import events via the "import probability" p(B|A), which is equivalent to the origin-destination (OD) matrix whose element T BA represents the number of trips from A to B, with the difference that the probability is normalized by all trips starting in A, i.e. p(B|A) = T BA /T A . There are mobility models that fit the OD matrix, requiring a reference OD matrix as seen in the gravity model <ref type="bibr" target="#b26">[27]</ref><ref type="bibr" target="#b27">[28]</ref><ref type="bibr" target="#b28">[29]</ref><ref type="bibr" target="#b29">[30]</ref><ref type="bibr" target="#b30">[31]</ref>. Additionally, some models integrate OD matrix-fitted models on a smaller scale with the OD matrix of the global air transportation network, creating a multiscale mobility network to represent all modes of transportation <ref type="bibr" target="#b31">[32,</ref><ref type="bibr" target="#b32">33]</ref>. Note that the multiscale mobility model has been successfully employed to analyze past pandemics <ref type="bibr" target="#b33">[34]</ref><ref type="bibr" target="#b34">[35]</ref><ref type="bibr" target="#b35">[36]</ref>. Yet, it can be extremely difficult to obtain the OD matrix and most often it is estimated by small surveys <ref type="bibr" target="#b36">[37]</ref> or alongside a census <ref type="bibr" target="#b37">[38]</ref>. Even for the air transportation network derived from a booking system, the OD is only an approximation since passengers increasingly book directly at the airlines (in 2015 30% of all Lufthansa flights were booked directly which increased to 52% in 2018 <ref type="bibr" target="#b38">[39]</ref>) and not via the big GDS (global distribution systems) from which most OD-estimates are derived <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b40">41]</ref>. This means that to exactly compute the air transportation OD matrix, bookings of all GDSs and about 900 airlines must be purchased/estimated and combined. Thus, models that do not rely on an existing reference OD matrix are important and those either assume an underlying decision process without integrating traffic information as the radiation model <ref type="bibr" target="#b41">[42,</ref><ref type="bibr" target="#b42">43]</ref> or they apply a maximum entropy approach to distribute the unknown OD trips along possible routes of a known traffic network <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45]</ref>. However, none of the above approaches use the effective distance with its qualitative link to disease propagation and none is based on a mechanistic distribution process on a traffic network. To our understanding, a mechanistic process mimics the detailed movement behavior of the passengers on the traffic network, and neither uses only quantities of and between the locations (gravity and radiation model) nor relies on principles of system in thermodynamic equilibrium (maximum entropy model), in other words it is a bottom-up approach. This approach grants us a mechanistic understanding of the observed patterns, enabling us to investigate how modifications impact passenger distribution. For instance, we can analyze how containment interventions along distribution routes reduce the import probability of infected passengers.</p><p>In this work, we introduce the import risk model, based on a distribution process following the shortest path tree of the WAN based on effective distance. This process is combined with a random walker that explores all potential paths within the WAN. We are using WAN data from the year 2014 and compare it to the Global Transnational Mobility Dataset from 2014 <ref type="bibr" target="#b39">[40]</ref>, as a ground truth baseline. Additionally, we investigate the discrepancy to the import risk and alternative mobility models as the gravity <ref type="bibr" target="#b26">[27,</ref><ref type="bibr" target="#b30">31]</ref> and radiation model <ref type="bibr" target="#b42">[43]</ref> through multiple comparison measures. We find that the import risk model outperforms the alternative models and improves only slightly when it includes not only WAN information but also the geodetic distance between airports. Lastly, we evaluate the quality of import probability estimation for specific countries and assess if and how the geodesic distance is encoded in the import risk estimate.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Relating the WAN, OD-probability and the effective distance</head><p>In this work, we introduce the import risk, which estimates the probability of a passenger departing from airport A to conclude their journey at any airport worldwide, even those not directly connected to the origin airport. The estimation is based on the traffic flow of airplanes and the respective maximal passenger capacity between airports, a.k.a. the world air transportation network (WAN), provided by the Official Airline Guide (OAG) <ref type="bibr" target="#b45">[46]</ref>. This inferenceproblem is intriguing because it is much easier to monitor the origin and destination of airplanes, than of passengers with possibly multiple connecting flights until their final destination. In our study, we use the WAN from 2014 (Fig 1A ) and compare the derived import probabilities to a reference dataset. The reference import probability is based on the Global Transnational Mobility Dataset (GTN) from 2014 <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b46">47]</ref>, which combines an originfinal-destination dataset from a major global distribution system (GDS) with a tourism dataset from the World Tourism Organization (Fig 1B, see Material and methods for more details on the data). Before introducing the import risk model, we contrast the two datasets, introduce the effective distance <ref type="bibr" target="#b15">[16]</ref> and quantify its potential as the base metric for our proposed model.</p><p>By comparing the world air transportation network (WAN) with the country-specific reference import probability from the GTN (compare Fig 1A and <ref type="figure" target="#fig_0">1B</ref>), we see that the airports connected via direct links belong to countries that also have a high import probability. Nevertheless, due to physical constraints and logistical optimization, not all countries with non-zero import probabilities are directly connected to airports in the source country; instead, they are reached via connecting flights. In the context of import probability, estimates based on geodesic distance and the population of the target country are useful but exhibit limitations in certain scenarios. For instance, the import probability for Italy is approximately 1.4 times greater than that for Germany, even though Germany is geographically closer to Canada and has a larger population. The effective distance is an alternative network-based distance measure that does not rely solely on direct connections and geographic information <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>. Instead, it is based on the passenger flow F ij from j to i and its relationship to the outflow F j through the transition probability P ij = F ij /F j . Together with a constant distance offset d 0 , the effective distance between directly connected airports is</p><formula xml:id="formula_0">d eff ðij jÞ ¼ d 0 À lnðP ij Þ :<label>ð1Þ</label></formula><p>The effective distance between airports without direct connection is the cumulative distance along the shortest path tree (SPT) derived from d eff , as illustrated for the largest Canadian airport (Toronto Pearson Airport, YYZ) in Fig 1C . Note that a distance offset of d 0 = 0 would make two routes indistinguishable as long as the product of the transition probabilities along each route is the same, but with d 0 &gt; 0 the one route with fewer connecting flights is effectively shorter. Previous studies have demonstrated that the arrival time of diseases in countries exhibits a linear dependence on their effective distance <ref type="bibr" target="#b15">[16]</ref><ref type="bibr" target="#b16">[17]</ref><ref type="bibr" target="#b17">[18]</ref><ref type="bibr" target="#b18">[19]</ref>. We show that the import probability also correlates with d eff (Fig 1D</p><p>), whereby the correlation is higher than for other distance measures (see Fig A in S1 Text). In fact, the import probability decays exponentially with effective distance (linear decay on a semi-log scale in Fig 1D) which can be reproduced in a simplified model for a passenger that travels at a constant effective speed and has a constant exit rate. Therefore, the effective distance seems to be a good representation of the underlying distribution process, and is a promising candidate for the base of our proposed import risk model, to directly estimate the import probability.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Import risk model</head><p>The idea behind the import risk model is a combination of two elements: (i) a random walk with an exit probability of the walker to finish its travel at the current node and (ii) a distribution mechanism derived from the d eff SPT (Fig <ref type="figure" target="#fig_1">2</ref>). The use of a random walk is motivated by Iannelli et al. <ref type="bibr" target="#b16">[17]</ref> who could improve the arrival-order prediction of d eff by including all possible paths. The exit probability enables us to combine the random walk with a distribution mechanism that assigns the likelihood of each node being the final destination, as explained in detail in the second step. In the first step, we use the transition network representation of the WAN and let a random walker start at source n 0 and after each step it either exits at the current node i with exit probability q i or continues to walk. Let us define the walker's probability to continue walking to node n given it was at node n -1 before and originally started in n 0 by S n;nÀ 1 ðn 0 Þ ¼ P n;nÀ 1 ð1 À q nÀ 1 ðn 0 ÞÞ ; ð2Þ with P n,n-1 as the transition probability from n -1 to n. Now the probability to walk along a path Γ starting at n 0 and exiting at n is the probability to continue walking S i,j along each link (i, j) that is part of the path times the exit probability of the final node</p><formula xml:id="formula_1">pðGÞ ¼ q n Y ði;jÞ2G S i;j ;<label>ð3Þ</label></formula><p>where we omitted the explicit dependence on the source n 0 . Our goal is to describe all possible paths the walker can take from n 0 to n. We will use the matrix S, whose elements are the probabilities to continue walking S i,j . The element (i, j) of the product of the matrix with itself S � S = S 2 sums over all paths of length l = 2 that end at i and start at j. Next, we can define the probability of a walker to exit at n after traversing all paths of length l as</p><formula xml:id="formula_2">p l ðnjn 0 Þ ¼ q n ðS l Þ n;n 0 :<label>ð4Þ</label></formula><p>Finally, the import risk is the probability to exit at n given all paths of all lengths</p><formula xml:id="formula_3">p 1 ðnjn 0 Þ ¼ q n X 1 l¼1 S l ! n;n 0 ¼ q n ððI À SÞ À 1 À IÞ n;n 0 ;<label>ð5Þ</label></formula><p>where we used the convergence of the geometric series with identity matrix I.</p><p>In the second step, we approximate the exit probability q i (n 0 ) that we used above, but did not specify yet. Thereby, we assume that passengers start at source airport n 0 , travel along the SPT and exit at node i with an exit-probability</p><formula xml:id="formula_4">q i ðn 0 Þ ¼ NðiÞ NðiÞ þ NðOðijn 0 ÞÞ<label>ð6Þ</label></formula><p>with N(i) as the population at airport i and O(i|n) as the set of all offspring nodes downstream of i on the SPT centered at source n 0 . Hence, the exit probability at node i is determined by the ratio of the population at node i to the combined populations of all downstream nodes of i on the SPT, inclusive of node i.</p><p>We estimate the population at airport i using its outflow on the WAN, denoted as N(i) = F i . To aggregate the import probabilities at the country level, we sum the targets and apply a weighted average to the source airports, with population serving as the weighting factor. Starting from the transition network (left) the shortest path tree is computed based on the effective distance (center bottom). Based on the shortest path tree, the exit probabilities q � = q(�|?) are computed. In the formula, the geometric symbols represent the estimated population of the respective node, which can also be distance-weighted (depending on the exact model). A random walk-process with exit probability is defined (top): at each step, the walker either exits the node with prob. q � = q(�|?), or continues walking with prob. (1 -q � ). The import risk p 1 (�|?) (right) is the probability of a walker to exit at node � given it started at node ? under consideration of all possible paths. <ref type="url" target="https://doi.org/10.1371/journal.pcbi.1011775.g002">https://doi.org/10.1371/journal.pcbi.1011775.g002</ref> </p><p>To elucidate how additional information about the geographic distance between nodes influences p 1 , we explore two variations of the import risk model: In the variation with "geodesic distance weighted" exit probability the populations in Eq 6 are substituted with N ðijn 0 Þ ¼ NðiÞ=d i;n 0 , where d i;n 0 is the geodesic distance between i and n 0 . To control for increasing model complexity, we study the "effective distance weighted" exit probability, where N ðijn 0 Þ ¼ NðiÞ=d eff ðijn 0 Þ, i.e. no geographic information is used, but the model structure is equivalent.</p><p>Alternative models. Numerous alternative models estimate the OD-matrix, from which the import probability can be derived <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b41">42,</ref><ref type="bibr" target="#b42">43,</ref><ref type="bibr" target="#b48">[49]</ref><ref type="bibr" target="#b49">[50]</ref><ref type="bibr" target="#b50">[51]</ref><ref type="bibr" target="#b51">[52]</ref>. Among those, the gravity <ref type="bibr" target="#b26">[27]</ref> and the intervening opportunity <ref type="bibr" target="#b41">[42,</ref><ref type="bibr" target="#b42">43]</ref> model are most widely used. A recent variant of the latter is the radiation model <ref type="bibr" target="#b42">[43]</ref>. Although past studies have found that the gravity model outperforms the radiation model at small scale <ref type="bibr" target="#b37">[38,</ref><ref type="bibr" target="#b52">53,</ref><ref type="bibr" target="#b53">54]</ref>, especially the radiation model's good performance at the large scale <ref type="bibr" target="#b37">[38,</ref><ref type="bibr" target="#b53">54]</ref> makes it an interesting model for mobility on the WAN. It was originally conceptualized for commuter flows <ref type="bibr" target="#b42">[43]</ref> where the surrounding populations serve as a proxy for possible job opportunities. By estimating an airport's population based on its outflow, we adjust the concept from job opportunities to tourism opportunities. Its derivation from a mechanistic decision process makes it parameter free, and therefore similar and a good comparison to our model. However, it only requires information on the population density and does not integrate flight data.</p><p>We compare our model to the gravity model with an exponential and power-law distance dependence and the radiation model (see Material and methods for definitions). These models solely rely on the outflow data from the WAN to estimate the node's population and the geographic locations. To incorporate structural information of the WAN <ref type="bibr" target="#b54">[55]</ref>, the alternative models are also implemented with the geodesic path distance (the geodesic distance along the SPT) and the effective distance, i.e. there are in total nine alternative models: the radiation model, the gravity model with exponential and with power-law distance decaying function, and each implemented with geodesic, geodesic path and effective distance. The exponents of the six gravity models are fitted to the reference import probability by assigning the best fitting exponent to each of the six comparison measures (Pearson correlation, root-mean-square error, common part of commuters, Kendalls rank correlation and the correlation and RMSE of the logarithmic measures, all defined in Material and methods) and taking their mean value (see Figs B and C in S1 Text). As comparison measures, we have chosen three measures that are related to the absolute error and three that are related to the relative error between estimate and reference.</p><p>Symmetry by returning visitors. Each of the twelve models provides an estimate for the import probability p(i|n 0 ), which is used to compute the OD-matrix T through multiplication with the corresponding source population N(n 0 ). By comparing the symmetry of T with the reference OD-matrix T, we find a much higher and qualitatively different symmetry in the reference data (see Supplementary Note B, Fig D in S1 Text). The high symmetry is likely due to visitors (family, business, tourism, etc.) that dominate the international travel. They return to their home-location after a limited period <ref type="bibr" target="#b55">[56]</ref> and only the minority of the travelers are migrants, i.e. stay permanently at the destination. Interestingly, the import risk model has the highest symmetry, but is still less symmetric than the reference data by a factor of 4. Therefore, before conducting a detailed comparison of the estimates, we rectify the import probability estimates by symmetrizing their OD-matrix (by extracting the symmetric part and recalculating the import probability; for further details, refer to Material and methods and Supplementary Note B in S1 Text). This correction can be seen as an alternative version of a doubly constrained model where normally the constraints on in-and out-flow are ensured by an iterative proportionate fitting <ref type="bibr" target="#b30">[31]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model comparison</head><p>In the subsequent analysis, we evaluate the import probability estimates against the reference data through four approaches: (i) a direct comparison and assessment of their medians to identify potential systematic errors, (ii) the application of six distinct goodness-of-fit metrics to assess the individual model's rank and relative performance, (iii) a classification task identifying countries with the highest import risk, particularly relevant in the context of a pandemic and (iv) a correlation study of the arrival time of 20 diseases and SARS-CoV-2 variants.</p><p>Qualitative comparison. In Fig <ref type="figure" target="#fig_2">3</ref> the import probability estimate p(i|n 0 ) of each model is compared to the reference import probability pðijn 0 Þ. The gravity models exhibit the closest agreement with the reference data when the effective distance is employed, as indicated by the medians (Fig <ref type="figure" target="#fig_2">3</ref>, first and second columns). In contrast, the median values of the radiation and import risk models are relatively stable and less influenced by variations in distance metrics or their associated weighting (third and fourth columns). All models overestimate the lowest median import probability (leftmost orange dot in Fig <ref type="figure" target="#fig_2">3</ref>), since the estimated import probability is always nonzero, but a large proportion of the lowest reference import probabilities are zero due to the limited observation period and/or an insufficient number of departing passengers. The overestimation of the median import probability is observed up to p(i|n 0 ) � 10 -4 for both the gravity and import risk models. However, this overestimation is notably absent in the case of the gravity model with an exponential distance decaying function and the effective distance metric (Fig 3I ), where the median demonstrates the closest alignment with the reference data. The radiation models (third column) systematically overestimates the highest import probabilities (p(i|n 0 ) &gt; � 10 -1 ) and consequently underestimates the lower import probabilities.</p><p>Goodness of fit by multiple measures. We compared each model with the reference import probability via the Pearson correlation, the root-mean-square error (RMSE), and the common part of commuters. These measures are more sensitive to strong links, i.e. large import probabilities, which is important when the emphasis is placed on the countries that are most likely to import passengers. However, if the focus is to get a fair comparison including all links, logarithmic versions of the above measures or rank correlations are more appropriate. Thus, we also quantify the agreement by the correlation and the RMSE of the logarithm of the measures and by Kendall's rank correlation. The three import risk model variations outperform the other models in all but one measure, whereby the variation employing the geodesic distance weighted exit probability performs best (Fig <ref type="figure" target="#fig_3">4A</ref>). Following the import risk models, the two gravity models based on effective distance also exhibit strong rankings. In contrast, the remaining models lack consistent high rankings across all six measures and are more evenly distributed within the lower half. This model categorization also holds for the relative performance of the models (Fig 4B ), with linear scaling of values in between (see <ref type="bibr">Eq 22)</ref>. In contrast to the rankings, the median relative performance shows a notable improvement when the gravity models incorporate effective distance. However, among the import risk models, the difference in median relative performance remains marginal.</p><p>The only measure where the import risk models are outperformed by the gravity models with effective distance is the logRMSE (Figs E, F in S1 Text). It is expected from the gravity models' good agreement in median import probability with the reference data over wide ranges and the overestimation of low import probability by the import risk model. This overestimation can be reduced by model-modifications that introduce parameters favoring the exit at nodes with large-populations (for details, see Supplementary Note C and Figs G, H in S1 Text). However, we refrain from adding complexity to the model, since its generic nature is its key aspect.</p><p>Classification of ten top risk countries. In a pandemic context, it is of specific interest to identify the countries with the highest import probability. We analyzed how well the twelve proxy models can classify, if a country is among the ten countries with the highest import probability. Again, the import risk models outperform the other models and the one with geodesic distance-weighted exit probabilities is the top predictor with a sensitivity of 71.1% (Fig <ref type="figure" target="#fig_4">5D</ref>). All effective distance-based models have a high sensitivity (&gt; � 65%), including the radiation model with 66.8% that had the lowest relative performance and second-lowest mean rank (Fig 5I <ref type="figure" target="#fig_4">-5K</ref>). For these high import probabilities, the import risk models now outperform the other models also in terms of RMSE and logRMSE, i.e. the 10 countries at highest risk are not only classified best by the import risk model, but also quantitatively assessed best.</p><p>Disease arrival time. In our final comparison, we evaluate the correlation between disease arrival times and the estimated import probability from the outbreak country of the disease. Note that the effective distance, which is the base of the import risk model, already has the clear relation to disease arrival times and the import risk model is developed to extend this qualitative relation to a quantitative number of passengers imported, as done in a recent study on the pandemic potential of SARS-CoV-2 variants <ref type="bibr" target="#b10">[11]</ref>. However, a qualitative comparison to arrival time is of course possible via the negative logarithm of the import probability for each model, which we refer to as effective model distance, which linearly relates <ref type="bibr" target="#b15">[16,</ref><ref type="bibr" target="#b18">19]</ref> to the arrival time t A (i|j) of a disease</p><formula xml:id="formula_5">d M ðijjÞ ¼ À lnðp ij Þ / t A ðijjÞ<label>ð7Þ</label></formula><p>with j as the disease outbreak country. The arrival time t A (i|j) is the number of days between the disease outbreak and the day the first case is reported in the target country i. We evaluated the correlation C(t A , d M ) for the H1N1 pandemic starting 2009 <ref type="bibr" target="#b7">[8]</ref>, the COVID-19 pandemic starting 2019 <ref type="bibr" target="#b56">[57]</ref> and 18 of its variants. Additional to the import probability models, the correlations of the geodesic, geodesic path and effective distance with t A are included. Our analysis reveals that models employing the effective distance as the distance measure consistently outperform those relying on the geodesic or geodesic path distance (Fig <ref type="figure" target="#fig_6">6A</ref>). Interestingly, the gravity model with a power-law decaying distance function consistently performs well, regardless of the specific distance measure employed. We do not observe a specific model that excels exclusively for certain diseases. Instead, we observe similar correlation values for the same disease across models (Fig <ref type="figure" target="#fig_6">6B</ref>), which suggests that there is considerable noise on the arrival time t A that varies between diseases. The noise could be related to the disease specific spreading speed: our assumption, that the outbreak country is the sole source, gets increasingly violated the slower the disease spreads, because other countries become secondary sources.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Import risk of countries and regions</head><p>Having quantified the performance of the import risk model, we now focus on (i) country specific differences in its prediction quality, (ii) possible limitations due to no concept of administrative units (e.g. countries) whose airports are more interconnected and (iii) how the geodesic distance is encoded in the import risk model, i.e. how a distance dependence emerges from WAN information only.</p><p>Country specific performance. In the import risk approach, we assume minimal knowledge of the system, i.e. only the WAN is known. Consequently, we differentiate countries only via their network properties, one of which is the degree of a node, or more precisely the node strength, since the WAN is a weighted network. It is the simplest metric that is also easily adjustable for the country-level perspective. At the country level, the node strength corresponds directly to the flow out of country</p><formula xml:id="formula_6">C F C ¼ X n2C X m= 2C F mn :<label>ð8Þ</label></formula><p>This country-specific characteristic signifies a country's potential to influence the network's structure, since flows from small-outflow countries are diluted by large-outflow countries.</p><p>From an ecological point of view, the outflow is strongly correlated with the gross domestic product of a country (Fig N in S1 Text). The correlation (logcorr) between the logarithms of the import risk p 1 and the reference import probability p1 improves with the outflow of the source country (Fig <ref type="figure" target="#fig_9">7</ref>), as illustrated by Great Britain (GB) as the country with the largest outflow in the WAN and Eritrea (ER) as one of the countries with the lowest outflow. The prediction improvement with the country's outflow suggests that the WAN is dominated by largeoutflow countries and therefore predictions worsen for countries with lower WAN outflow. However, the prediction improvement is also present in model alternatives that do not use WAN information at all (e.g. gravity with geodesic distance, Fig M in S1 Text). We rule the explanation out that the alternative models show this improvement due to preferential fitting of strong links-and therefore of large-outflow countries-since the models are fitted to the reference data by their import probabilities, which ensures equal weighting among countries. It rather suggests that the mobility behavior in low outflow regions is different, also supported by the sudden performance saturation for countries with a WAN outflow of F C &gt; � 10 6 (Fig <ref type="figure" target="#fig_9">7</ref> and There are clear exceptions where the import risk estimation is worse compared to outbreak countries with a similar WAN outflow, as Australia (AU), Israel (IL) and Macao (MO). These countries are connected due to historical relations to specific regions that are either not in their direct neighborhood (European countries for AU and IL) or that are more important than the bare neighborhood would suggest, as Macao that is a special administrative region of China. For Macao the import risk to China is underestimated, which consequently overestimates the import to other countries, and for AU and IL Europe is underestimated which overestimates other regions (Fig <ref type="figure" target="#fig_9">7</ref>). AU, IL, and MO serve as examples illustrating that the WAN may not fully encapsulate all relevant information accessible to the import risk model. Another concept that is missing in our methodological approach is the idea of a country or another administrative unit. Instead, it treats airport pairs uniformly, disregarding their country affiliations. Since we know the international flights leaving a specific country from the WAN, we can run a self-consistency analysis, i.e. without the need of reference import probability data.</p><p>We can estimate the outflow leaving the country C by the import risk model by Possible explanations for this overestimation include the absence of a country-specific concept within the import risk model and the unintentional inclusion of transit passengers in the population count of airport catchment areas (since we use the outflow as a proxy for the population). However, we can easily correct for this overestimation on countrylevel analysis, by normalizing the airport population such that the WAN country outflow is recovered. Geodesic distance dependence. The import risk model estimates import probabilities without explicit geodesic-distance information (excluding the variant with distance weighted exit probability). Since classical models have proven distance to be a good predictor for human mobility, we assume that it is encoded in the WAN structure and by consequence in the import risk estimate <ref type="bibr" target="#b57">[58]</ref>. To enhance clarity, we aggregate the import risk data across twentytwo world regions. We observe that the import risks to individual targets decrease in a manner resembling a power-law as the geodesic distance to the sources increases <ref type="bibr">(Fig 8A and 8B and Fig L in S1 Text)</ref>. When we change our perspective and examine the distance-dependence from a single source to all target regions (Fig 8D and <ref type="figure" target="#fig_10">8E</ref>), the observed dependence is less consistent with a power-law fit of the form p</p><formula xml:id="formula_7">T C ¼ X n2C X m= 2C p 1 ðmjnÞN n :<label>ð9Þ</label></formula><formula xml:id="formula_8">1 ¼ c � d À a ij (Fig 8C)</formula><p>. This is surprising, since the import risk is computed via a source-centric view (by computing the exit probability from the shortest path tree originating at each source), which suggests that the distance dependence should be best from one source to its possible targets. A possible explanation is that each target possesses its own attractiveness independent of the source region. This suggests that the distribution dynamics may resemble a pull mechanism rather than a push mechanism. Indeed, we find that the fitted exponent α from the power-law fit decreases as the WAN flow out of the target region increases, which can serve as a proxy for the attractiveness of a region (Fig <ref type="figure" target="#fig_10">8F</ref>). In other words, the more attractive a region, the larger the import risks from more distant source regions. The fitted exponent c has a high rank correlation with α (τ Kendall = 0.89), i.e. also the coefficient is dependent on the attractiveness of the region. Import risk aggregated on regional level "to target" vs. "from source" and its geodesic distance dependence. The geodesic distance between regions predicts the import risk p 1 to a single target from all sources (A, B) better than from a single source to all targets (D, E) as can be seen by the p-values (C) of the power law fit p 1 (d) = c�d -α that is illustrated for each selected examples by a grey line ( <ref type="figure">A,</ref> <ref type="figure">B,</ref> <ref type="figure">D,</ref> <ref type="figure">E</ref>). The fitted exponent α of the import risk to a single target decreases with the respective regional WAN flow out of the target region (F), i.e. the more connected a region, the weaker the import risk decays with distance. The dashed horizontal lines show the average import risk of a single target (A, B) or a single source (D, E). The color of the dots corresponds to the depicted world regions (right). Maps are created with geopandas <ref type="bibr" target="#b47">[48]</ref>.</p><p><ref type="url" target="https://doi.org/10.1371/journal.pcbi.1011775.g008">https://doi.org/10.1371/journal.pcbi.1011775.g008</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion and conclusion</head><p>Motivated by the import probability's strong dependence on the effective distance, we implemented the import risk model based on the effective distance shortest path tree's exit probability in combination with a random walk on the WAN. As a result, we can infer the passenger trip distribution within the traffic network of their transport vehicle (WAN). When we compare our parameter-free model to variations of established mobility models, we observe that it surpasses the alternatives in most comparison measures. The only exception is where the two parameter-fitted gravity models with effective distance perform the best. The import risk model is the most accurate in determining countries with the highest import probability and is one of the models that correlate best with the time of arrival of 20 diseases, showcasing its importance for epidemic-related problems. However, it systematically overestimates low import probabilities and its performance worsens for countries with a passenger outflow below a million per year. Despite the lack of any explicit geodesic distance information, the import risk model recovers a geodesic distance dependence. This distinction is more prominent when considering all sources to a single target compared to the reverse scenario. We attribute this phenomenon to a target's specific attractiveness, which we estimate using its node strength, i.e. the target's passenger outflow.</p><p>The only measure where the gravity models with effective distance outperform the import risk models is the logRMSE. This is likely due to their good agreement over wide ranges of the import probability (Fig 3I and <ref type="figure" target="#fig_2">3J</ref>). The import risk model performs poorly with respect to the logRMSE due to its systematic overestimation of low import probabilities. Note, that the second parameter free model, the radiation model, systematically underestimates low import probabilities in the same way as the import risk model does. This is expected, since deviation from the assumptions cannot be corrected by any parameter adjustment. We identified several ways to reduce the import risk's overestimation of low import probabilities by introducing an additional parameter that scales the population of the respective airport, changes the exit probability along the shortest path tree or only the exit probability of specific nodes (for details, see Supplementary Note C and Figs G, H in S1 Text). In conclusion, we find that introducing modifications that enhance the probability of exiting at airports or nodes with large populations mitigates the issue of overestimation. However, we leave this as a possible extension of our model and highlight that it outperformed the other models in all correlation measures, illustrating its high potential.</p><p>The radiation model's poor performance can likely be attributed to its initial design, which focused on small-scale commuter flows driven by work opportunities <ref type="bibr" target="#b42">[43]</ref>, which shows that bottom-up approaches are often limited to their specific use case but can be adapted, such as the extended radiation model <ref type="bibr" target="#b58">[59]</ref>, which is no longer parameter-free and has similar performance to the gravity model <ref type="bibr" target="#b53">[54]</ref>. Interestingly, the radiation model is the only one that does not improve with inclusion of flight network information via the geodesic path or the effective distance (Fig <ref type="figure" target="#fig_3">4</ref>). The radiation model's insensitivity to network information can be attributed to the fact that it only extracts rank information from the distance data, resulting in a significant loss of information. The rank representation has the problem that airports that directly follow in their rank with respect to a source airport could be separated by a mountain range or ocean, i.e. the rank difference is minimal but the actual distance immense. This argument holds for any distance information.</p><p>We corrected the import probability by the symmetrization of the respective OD-matrices which corresponds to a specific form of a doubly-constrained model. Normally, the constraints only ensure that the out-and inflow of each location corresponds to the observations <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b53">54]</ref>, in contrast, we assume that both equal each other because of returning visitors. We repeated the model comparison without the correction: it reduced the agreement with the reference data for all but five of the seventy-two model-measure combinations (Fig F in S1 Text), which is in agreement with previous studies that report a better performance of doubly constrained models <ref type="bibr" target="#b53">[54]</ref>. Importantly, the import risk model still outperforms the other models if the import probability estimates are not corrected (compare Fig <ref type="figure" target="#fig_3">4</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>with Fig J in S1 Text</head><p>). It's crucial to note that the assumption of returning visitors is applicable when visitors and tourists dominate while migrants can be disregarded. However, this assumption may not hold for links between low-and high-income countries or conflict regions.</p><p>In the disease arrival time analysis, all models that use the effective distance perform similarly well, including all gravity models with power-law distance decay. The disease arrival time t A correlates with the logarithm of the estimated import probabilities, i.e. the results should be in agreement with the logcorr goodness of fit results. The models with effective distance vary only by maximal 0.07 in their logcorr measures and these are based on 183 countries as potential source (Fig J in S1 Text). However, the 20 diseases in the arrival time analysis have only 10 unique outbreak countries. Additionally, due to factors like varying testing rates between countries, the uncertainty in arrival times, and other factors, the sample size is likely insufficient to recover the logcorr results. In order to decrease the noise on t A , we repeated the analysis by extrapolating the arrival time via a logarithmic fit on the early cases, i.e. assuming an initial exponential growth (see Supplementary Note D in S1 Text). As a result of this procedure, some countries with insufficient data for extrapolation had to be excluded, which in turn led to the exclusion of more diseases. Nevertheless, the results are consistent with the t A estimation by 1st count (compare <ref type="bibr">Fig 6 and</ref>  We found that without providing any geodesic distance information to the import risk model, a distance dependence is recovered that is stronger for import probabilities to a single target, than from a single source, even if the import probability is computed from a sourcecentric view. Since the WAN is spatially embedded and has a network dimension of three <ref type="bibr" target="#b57">[58]</ref>, its connections reflect up to a certain degree the characteristics of the embedding space. This explains the import risk model's ability to capture distance dependence in general. That distance is a better predictor in the target-centric view aligns well with a previous study in which a target-specific human-mobility model collapses mobility data to multiple targets by assigning each target a specific attractiveness that is proportional to the target's population <ref type="bibr" target="#b50">[51]</ref>.</p><p>The import risk model predictions worsen for countries with a small outflow on the WAN, and since the country's WAN outflow is proportional to its gross domestic product, the model performs less good for countries with a lower GDP, i.e. small population and/or low to middle income countries. This is unfortunate, as our model derives Origin-Destination (OD) information (costly to directly monitor) from cost-effective traffic flow monitoring, making it particularly valuable for regions with limited resources. However, we find that the model alternatives (gravity, radiation) also perform poorly for low-outflow countries and that the passenger distribution of the latter is most likely constrained by the GDP and thus limited to the target-regions in effective proximity. To circumvent this problem, one could aggregate neighboring low-outflow countries until the conglomerate crosses the outflow threshold of F C = 10 6 above which we observe a performance saturation (Fig <ref type="figure" target="#fig_9">7</ref> and While we have assessed the model's performance on the world air transportation network, its applicability extends to other modes of transportation such as subway systems, cars, buses, and trains. Future research will explore the specific conditions under which this model can be effectively applied. Furthermore, there is room for improvement in the basic estimation of the traveling population within an airport's catchment area based solely on its outflow. This estimation does not currently account for the significant role of hubs and the missing information about transit passengers. The simple framework that only relies on the traffic network is appealing, but in certain scenarios its prediction can be refined by using information about the GDP, Gini-coefficient or population density.</p><p>Our comparison focused on the parameter-free radiation model and the fitted gravity model, but we acknowledge the existence of promising variations and alternative models that were not included in this study <ref type="bibr" target="#b29">[30,</ref><ref type="bibr" target="#b30">31,</ref><ref type="bibr" target="#b53">54,</ref><ref type="bibr" target="#b58">59]</ref>. However, the gravity model is widely applied and has been shown to perform equally well <ref type="bibr" target="#b58">[59]</ref> or better than alternatives <ref type="bibr" target="#b53">[54]</ref>. There are exceptions, e.g. an iterative computation of a gravity-like model outperforms the common gravity model in cases where the complete mobility network is not available <ref type="bibr" target="#b28">[29]</ref>. Additionally, the radiation model outperforms the gravity model for long-distance connections <ref type="bibr" target="#b37">[38,</ref><ref type="bibr" target="#b53">54]</ref>. Still, the simplicity of the gravity model and its adaptability by parameter adjustment make it a strong counterpart. The model alternatives make use of the WAN-structure information by using the effective distance as done in e.g. Ren et al. <ref type="bibr" target="#b59">[60]</ref> where the radiation model with timedistance was better than the travel-distance on the road network to predict the traffic on each link. Similarly, we observed that the effective distance, which is related to the arrival time of diseases, outperforms geodesic path-distance in predicting import probabilities.</p><p>The import risk model is fundamentally different from classic approaches that estimate OD trips from traffic data, because the latter find the OD trips that best reproduce the traffic data <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b29">30,</ref><ref type="bibr" target="#b43">44,</ref><ref type="bibr" target="#b44">45]</ref>, while our model runs a distribution process on the traffic data network. Thus, our model is a mechanistic bottom-up approach, while the classic approaches either fit and require the knowledge of the reference trip data <ref type="bibr" target="#b27">[28,</ref><ref type="bibr" target="#b29">30]</ref> or are based on the assumption that the trip distribution across the links follows the maximum entropy principle, i.e. the OD trips are considered as most likely that can be realized by the largest number of microstates <ref type="bibr" target="#b43">[44,</ref><ref type="bibr" target="#b44">45]</ref>. Note that maximum entropy approaches require an estimation of routes and their alternatives between each OD pair, while we allow all routes to be taken by the random walker. To the best of our knowledge, our model stands as unique in its mechanistic nature, enabling the study of modifications to its underlying distribution process. This includes strategies for containment aimed at slowing or restricting a pandemic, for instance. A straight forward implementation could be the testing of a fraction of passengers C i � 1 at every transit airport i, which corresponds to reducing the probability to continue walking of an infected passenger (Eq 2) to Sn;nÀ 1 ðn 0 ; CÞ ¼ ð1 À C nÀ 1 Þ � P n;nÀ 1 ð1 À q nÀ 1 ðn 0 ÞÞ :</p><formula xml:id="formula_9">With C = [C 1 , C 2 , .</formula><p>. .] one could allow for a varying testing capacity between the airports.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Material and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data sources</head><p>The WAN provided by OAG (Official Airline Guide) <ref type="bibr" target="#b45">[46]</ref> contains the number of flights and the respective maximum seat capacity F i,j between airports i and j aggregated for the year 2014. The reference import probability pðmjnÞ ¼ T mn = T n is based on the "Global Transnational Mobility Dataset" <ref type="bibr" target="#b39">[40,</ref><ref type="bibr" target="#b46">47]</ref> that assigns the number of trips in 2014 T mn from country n to m worldwide by combining the world air transportation origin-final-destination data set from the company SABRE, and cross-boarder visits with an overnight stay from the UNWTO (World Tourism Organization). Thus, pðmjnÞ represents not only the mobility via air travel but also via other means (sea, road, rail). However, air travel dominates long distance trips which makes it a fair reference set of the air transportation origin-final-destination matrix. For details on how the data sets were combined, see Supplementary Note A in S1 Text.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Alternative models</head><p>The gravity model states that the number of trips between regions n and m increase with their population sizes (N n and N m ) and decrease with distance d nm</p><formula xml:id="formula_10">T mn ¼ O n N n N m f ðd nm Þ ;<label>ð10Þ</label></formula><p>with f(d) as a function that grows monotonically with distance d, most often chosen as either a power-law f(d) = d γ or an exponential f(d nm ) = e γd . In the radiation model, the trips from n to m depend on their respective population sizes N n , N m (or other measures as job opportunities) and on the number of people s mn that are in a circle with radius r mn centered around location n including N n and N m :</p><formula xml:id="formula_11">T mn ¼ O n N n N m ðs mn À N m Þs mn :<label>ð11Þ</label></formula><p>The import probability of both models is computed by normalizing the trips with respect to the source-region</p><formula xml:id="formula_12">pðmjnÞ ¼ T mn P j T jn ¼ T mn T n :<label>ð12Þ</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Trip-symmetrization</head><p>We correct the import probability via symmetrizing the OD-matrix by (i) compute the estimated OD-matrix</p><formula xml:id="formula_13">T ð0Þ m;n ¼ p ð0Þ ðmjnÞN n<label>ð13Þ</label></formula><p>from the import probability estimate, (ii) correct it by computing its symmetric part</p><formula xml:id="formula_14">S ¼ ðT þ T &gt; Þ=2<label>ð14Þ</label></formula><p>and (iii) compute the corresponding corrected import probability via</p><formula xml:id="formula_15">p ð1Þ ðAjBÞ ¼ S AB =S B :<label>ð15Þ</label></formula><p>By going through these steps, the asymmetry is reduced heavily but still persists. Thus, we repeat steps (i) till (iii) until p (3) (A|B), which returns for all models a comparable asymmetry in mean and median to the reference data (see Supplementary Note B in S1 Text for details).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison measures</head><p>We compare the import probability models with the reference data via the Pearson correlation</p><formula xml:id="formula_16">corrðx; yÞ ¼ E½ðx À � xÞðy À � yÞ� s x s y ;<label>ð16Þ</label></formula><p>with E½x� � � x as average, the root-mean-square error RMSEðx; yÞ ¼ ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi E½ðx À yÞ 2 � q ; ð17Þ the common part of commuters <ref type="bibr" target="#b58">[59]</ref> cpcðx; yÞ ¼</p><formula xml:id="formula_17">2 P ij minðx ij ; y ij Þ P ij x ij þ P ij y ij ;<label>ð18Þ</label></formula><p>which is 1 if all links are identical and 0 if none of them agrees. All the above measures are more sensitive to strong links, i.e. large import probabilities. However, if the focus is to get a fair comparison including all links, we are more interested in logarithmic versions of the above measures or rank correlations. Thus, we compare the logarithm of the import probabilities via correlation logcorrðx; yÞ ¼ corrðlogðxÞ; logðyÞÞ ; ð19Þ root-mean-square error logRMSEðx; yÞ ¼ RMSEðlogðxÞ; logðyÞÞ ; ð20Þ and use the Kendall rank correlation coefficient t Kendall ¼ C À D ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi ffi</p><formula xml:id="formula_18">ðC þ D þ T x ÞðC þ D þ T y Þ q ;<label>ð21Þ</label></formula><p>with C and D as the number of concordant and discordant pairs and T x and T y as ties only in x and y, respectively.</p><p>To simplify and generalize the comparison we combine the six above defined measures by computing the mean rank of each model, i.e. the best correlating model has the highest <ref type="bibr" target="#b11">(12)</ref> and the worst the lowest (0) rank and the mean rank of one model is the average of all six ranks.</p><p>To quantify the mean difference between the models we define the relative performance of one model M as</p><formula xml:id="formula_19">rel:perf:ðf ðx M ; yÞÞ ¼ f ðx M Þ À worstðf ðx k Þ; kÞ bestðf ðx k Þ; kÞ À worstðf ðx k Þ; kÞ ;<label>ð22Þ</label></formula><p>with f(x M ) = f(x M , y) as the specific comparison function and best( f (x k ), k) and worst( f (x k ), k) as the best and worst performing value of all models using this comparison function. Note, that best(. . .) = max(. . .) apart for the rmse-measures, where it is min(. . .) (analog for worst (. . .)).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Disease arrival times</head><p>The disease arrival time t A (i) in country i is estimated by the date of the first reported case for H1N1 and SARS-CoV-2. For the SARS-CoV-2 variants we use the first sequenced sample in this country. However, for certain variants some sequenced samples appear in the statistics month before the outbreak date declared by the WHO <ref type="bibr" target="#b60">[61]</ref>, which we treat as misclassifications, discard them and use instead the first sample after the WHO listed outbreak for the respective country (see Supplementary Note D for details and Fig O in S1 Text). For each of the diseases/variants we used the WAN that we have access to and that is closest to the respective outbreak date (see Table B in S1 Text) and as outbreak country we used the one listed by the WHO as first country with first sequenced sample of the respective variant [61]. For the H1N1 outbreak in 2009 we used the case data provided by FluNet [62, 63] (the column AH1N12009), for the COVID-19 cases we use the WHO COVID-19 dashboard [64] accessed through ourworldindata.org, the number of sequenced samples was accessed through GISAID [65-67] using the file gisaid_variants_statistics.json. function and by the import risk model (4th column). The OD-matrix of the models is computed by multiplying the import probability with the source-outflow. The reference trips and return trips have the highest symmetry (5th column, M). The orange line depicts the median and the gray line is y = x and illustrates perfect symmetry. The mean (AVG(a sym )) and median (MED(a sym )) asymmetry of the flows, computed according to Eq. C in S1 Text., are shown in each panel. The reference trips (M) show the lowest asymmetry, especially for large passenger flows. Fig E. Relative comparison measures for the import probability estimates. The rank (A) and the relative performance (B) for the different import probability estimation models. The model that agrees best (worst) with the reference import risk according a specific measure has the highest (lowest) rank and a relative performance of one (zero). The relative performance is then a linear interpolation between the best and worst model. The comparison measures are the correlation (corr), correlation between the log-transformed import risks (log_corr), Root-mean-square error (rmse), Root-mean-square error of the log-transformed import risks (log_rmse), Kendall rank correlation (kendalltau) and the common part of commuters (cpc). As exponents of the gravity models the mean optimal parameter is used (horizontal lines in Fig C in S1 Text.). Fig F. Absolute comparison measures for the import probability estimates. The comparison measures are the correlation (corr), correlation between the log-transformed import risks (log_corr), Root-mean-square error (rmse), Rootmean-square error of the log-transformed import risks (log_rmse), Kendall rank correlation (kendalltau) and the common part of commuters (cpc). As exponents of the gravity models the mean optimal parameter is used (horizontal lines in A: the flow scaling exponent ν that estimates the travelling population N(i) of the airport i depending on its WAN outflow F i via NðiÞ ¼ F n i (default: ν = 1). B: the effective distance offset d 0 that penalizes larger hop-distances in the effective distance d eff (i|n 0 ) = d 0 -ln(P ij ) when creating the shortest path tree (default: d 0 = 1). C: the descendant fraction introduced in the shortest path exit probability, where 0.5 is the default value and values larger than 0.5 mean that the exiting at the descendant (or offspring) nodes compared to the current node becomes more likely. D: different weight options introduced for the shortest path tree exit probability. Per default, the node populations are not weighted. The weight is the inverse of either the geodesic or the effective distance. E: manually set shortest path exit probability of leaf nodes (dead-end nodes). Per default, the exit probability is 1. A decrease to 0.9 or 0.8 does not visually change the median.  <ref type="bibr">(B)</ref>. The import risk model does not include the concept of a country which partly explains the overestimation for larger airports. Another explanation is the overestimation of the respective airport population N n = F n by the WAN outflow for the import risk model (the true population is smaller because of the transit passengers that need to be excluded). Note that the WAN is used here, i.e. we check for self-consistency of the model and no reference data is included. Import risk between world regions to a specific target region. In contrast to its derivation the import risk is displayed in a target-centric view, i.e. each panel displays the import probability to a single target region from all source regions. The distance between world regions is the mean distance between their airport locations. The grey line represents a power-law fit p 1 = c � d -α . The mean import risk is marked for each world region by a horizontal dashed line. The 22 targetworld-regions are sorted according to their mean import risk. Maps are created with geopandas <ref type="bibr" target="#b47">[48]</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>population and GDP</head><p>The WAN flow out of a country is best mapped by its gross domestic product (GDP, C) compared to its population (A) or per capita GDP (B). The linear double-logarithmic regression results are shown in the lower part of each panel (r-and p-value). The size of each country corresponds to its population (A) and the color codes its continent. GDP is taken from the World Bank Dataset for the year 2014 <ref type="bibr" target="#b68">[69]</ref>. Fig O . Variant outbreak detection and fraction of sequenced samples for each of the considered variants. To illustrate the spread of the variant and how often it occurs worlwide the fraction of the variant in all sequenced probes is plotted, i.e. if it reaches 1, all sequenced probes are the respective variant. The official WHO outbreak date <ref type="bibr" target="#b60">[61]</ref> is highlighted as red dotted vertical line. We estimated an outbreak date by 45 days before the fraction of sequenced samples reached 2.5% of its world-wide peak. The orange vertical lines (lower row of lines) show for each country the arrival of the variant, estimated by the first sequenced probe ("count1"). The black vertical lines (upper row of lines) show the arrival times after the outbreak which are used in the main text. New case numbers of the Alpha variant for countries that passed the selection criteria for the log-cases fit to extrapolate the arrival time t A in the attempt to reduce noise. The vertical dashed line marks the outbreak as listed by the WHO <ref type="bibr" target="#b60">[61]</ref>, the yellow star is the extrapolated arrival time from the log-cases fit that is illustrated by a yellow line. To determine the peak-0 (marked by a vertical line) we used a difference analysis on the smoothed new-cases data. Fig R . New case numbers of the Alpha variant for countries that failed the selection criteria for the log-cases fit to extrapolate the arrival time t A in the attempt to reduce noise. The vertical dashed line marks the outbreak as listed by the WHO <ref type="bibr" target="#b60">[61]</ref>. Those countries that passed the criteria C0 and C1 (see Table A in S1 Text. for details) show the log-cases fit. Note that the latter have an extrapolated t A before the outbreak date listed by the WHO. To determine the peak-0 (marked by a vertical line) we used a difference analysis on the smoothed new-cases data. (PDF)</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig 1 .</head><label>1</label><figDesc>Fig 1. The relation between WAN, OD-probability, SPT and effective distance. A: The world air transportation network (WAN) represents the direct flight connections and maximal seat capacities between airports in 2014, here shown for flights starting from five selected countries. It is based on flight-schedule-data. The lines are bundled and do not represent the specific flight route, but illustrate the links to airports abroad. B: The reference import probability from Canada to all countries, based on the OD matrix (Origin-Destination) of the Global Transnational Mobility Data set [40, 47] in 2014. It combines origin and final-destination trips between countries from the SABRE and the World Tourism Organization (UNWTO). The lines illustrate the connection to the common source country. C: Based on the effective distance d eff = d 0 -ln(p) a shortest path tree (SPT) is constructed with the largest Canadian airport as source (YYZ: Toronto Pearson International Airport). The link color and thickness shows the hop distance, i.e. number of connecting flights. D: exponential decay of the reference import probability (as in B but for all countries as source) with the effective distance d eff (derived from the SPT (C) of the WAN (A)). Each dot represents a country-country link, the lines are medians including either all source countries or only from a specific continent. Maps are created with geopandas [48]. https://doi.org/10.1371/journal.pcbi.1011775.g001</figDesc><graphic coords="4,48.02,301.81,528.04,299.80" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig 2 .</head><label>2</label><figDesc>Fig 2. Import risk scheme. Starting from the transition network (left) the shortest path tree is computed based on the effective distance (center bottom).Based on the shortest path tree, the exit probabilities q � = q(�|?) are computed. In the formula, the geometric symbols represent the estimated population of the respective node, which can also be distance-weighted (depending on the exact model). A random walk-process with exit probability is defined (top): at each step, the walker either exits the node with prob. q � = q(�|?), or continues walking with prob. (1 -q � ). The import risk p 1 (�|?) (right) is the probability of a walker to exit at node � given it started at node ? under consideration of all possible paths.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig 3 .</head><label>3</label><figDesc>Fig 3. Estimates of import probability by the gravity model with exponentially (1st column) and power law (2nd column) decaying distance function, the radiation model (3rd. column) and by the import risk model (4th column). The first three models (1st-3rd column) use as distance the geodesic (1st row), geodesic path (2nd row) and the effective (3rd row) distance. The import risk model is computed from the WAN with the geodesic distance (D) or the effective distance (L) as a weight for the exit probabilities or without weighting (H), i.e. in the last two cases (H, D) only WAN information is used. The orange line depicts the median and the gray line is y = x and illustrates perfect mapping. https://doi.org/10.1371/journal.pcbi.1011775.g003</figDesc><graphic coords="8,154.89,343.84,421.06,292.31" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig 4 .</head><label>4</label><figDesc>Fig 4. Rank and relative performance of import risk estimation models. The different import probability models are compared via their rank (A) and relative performance (B), with the highest values representing the best approach. The rank and relative performance are shown for each (black dots) of the six comparison measures (corr, logcorr, RMSE, logRMSE, cpc, τ Kendall ) the box illustrates the interquartile range, the horizontal line the median and the red triangle the mean. The colors of the boxes illustrate the different distance measures in use. The outlier measure of the import risk models (I.R.) is the logRMSE, where the gravity models with effective distance are performing best. See Material and methods for definitions of comparison measures and Figs E, F in S1 Text for absolute and detailed relative performance. https://doi.org/10.1371/journal.pcbi.1011775.g004</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig 5 .</head><label>5</label><figDesc>Fig 5. Classification of the 10 countries with the highest import probability by the gravity model with exponentially (1st column) and power law decaying (2nd column) distance function, the radiation model (3rd. column) and by the import risk model (4th column). A true or false positive (T. Pos. or F. Pos.) means that the country is or is not among the 10 countries with the highest reference import probability p. A false negative (F. Neg.) means that it belongs to the reference set but was not detected by the respective model. The pie chart illustrates the sensitivity of the models. https://doi.org/10.1371/journal.pcbi.1011775.g005</figDesc><graphic coords="10,200.01,424.06,276.89,205.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><figDesc>A simple linear regression of the mean correlation hC(t A , d M )i and the mean arrival time ht a i supports this hypothesis (r = -0.44, p = 0.055, Fig K in S1 Text).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head>Fig 6 .</head><label>6</label><figDesc>Fig 6. Correlation analysis: Disease arrival time vs. the effective model distance. Each model's import probability is converted to an effective distance d M (i|n 0 ) = -ln(p(i|n 0 )) with n 0 as the outbreak country of the respective disease. The correlation results C(t A , d M ) with the arrival time t A (i) of the disease in the target country i are grouped by model (A) and by the disease (B). As comparison distances, the correlation of the geodesic, geodesic path (on the effective shortest path tree) and the effective distance with t A are shown. Each dot represents a correlation result of the 21 considered outbreaks (H1N1 in 2009, COVID-19 in 2020 and the spread of 18 of its variants in the years 2020-2022). https://doi.org/10.1371/journal.pcbi.1011775.g006</figDesc><graphic coords="11,155.11,78.01,420.89,116.84" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><figDesc>Fig M in S1 Text). Possibly, their passenger distribution is constrained by additional factors and is limited to the regions in proximity.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8"><figDesc>If we compare it to F C the WAN flow out of country C (see Eq 8), it turns out that the import risk model systematically overestimates the flow out of a country (Fig I panel A in S1 Text). In fact, the relative error increases with the number of airports belonging to the country (Fig I panel B in S1 Text).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9"><head>Fig 7 .</head><label>7</label><figDesc>Fig 7. Source countries' prediction quality and WAN outflow.The correlation between the logarithm of the import risk and the reference import probability logcorr ¼ corrðlogðp 1 Þ; logðpÞÞ improves with the outflow of the respective source country (top). Examples of source countries with particularly low (ER, Eritrea) and high (GB, Great Britain) outflow and log_corr are shown with their import risk and reference import risk to target countries (middle row). Countries with exceptionally low log_corr measures compared to source countries with a comparable outflow are either historically linked to specific regions as Australia (AU) and Israel (IL) to European countries (lower right panel) or politically as Macao (MO) as a special administrative region of China. https://doi.org/10.1371/journal.pcbi.1011775.g007</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10"><head>Fig 8 .</head><label>8</label><figDesc>Fig 8.Import risk aggregated on regional level "to target" vs. "from source" and its geodesic distance dependence. The geodesic distance between regions predicts the import risk p 1 to a single target from all sources (A, B) better than from a single source to all targets (D, E) as can be seen by the p-values (C) of the power law fit p 1 (d) = c�d -α that is illustrated for each selected examples by a grey line (A, B, D, E). The fitted exponent α of the import risk to a single target decreases with the respective regional WAN flow out of the target region (F), i.e. the more connected a region, the weaker the import risk decays with distance. The dashed horizontal lines show the average import risk of a single target (A, B) or a single source (D, E). The color of the dots corresponds to the depicted world regions (right). Maps are created with geopandas<ref type="bibr" target="#b47">[48]</ref>.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11"><figDesc>Fig P in S1 Text).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12"><figDesc>Fig M in S1 Text). Of course, this compromise comes with a lower spatial resolution and we emphasize the need for future research in this direction.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13"><figDesc>Fig C in S1 Text.). The colors depict the 4 different models. The solid circles are the models with corrected import probability by symmetrizing their OD-matrix, and the transparent squares are the non-corrected import probabilities of the respective model. Fig G. Import risk comparison and its deviation from a linear relation. Scatter plot (left) and only median and IQR with an exponential fit (right). Fig H. Variations of the import risk model to investigate how additional parameters influence the relation between the import risk and the reference import risk.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14"><head>Fig I .</head><label>.</label><figDesc>Country outflow reconstruction by import risk. The flow in the WAN leaving a country F C is estimated by the import risk model by T C = ∑ n2C ∑ m= 2C p 1 (m|n)N n . Both measures are directly compared (A) and the relative error is computed depending on the number of airports in the respective country N arpts</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15"><figDesc>Fig J. Uncorrected models: rank and relative performance. Same analysis as in the main text in Fig 4), however, here the uncorrected model predictions are used, i.e. without symmetrizing the OD-matrix. Fig K. Mean correlation between arrival time and effective model distance vs. the speed of the disease estimated by the mean arrival time ht A (C)i C , averaged over all countries C. The correlation C(t A , d M ) between arrival time t A and effective model distance d M is averaged over all models. The size of the datapoints illustrates the number of countries that were reached by the disease. Fig L.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16"><figDesc>Fig M. Source countries prediction quality and WAN outflow for two gravity models. Same model-result representation as in Fig 7 but here instead of the import risk model, the gravity model with power-law distance decaying function using the geodesic d geo (left) or effective d eff (right) distance is applied. Also for these models the logcorr between import probability estimates p(i|n 0 ) and the reference data pðijn 0 Þ improves for countries with a larger outflow in the WAN. Fig N. WAN flow out of countries vs.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_17"><figDesc>Fig P. Correlation analysis with logcases estimated arrival time. Each model's import probability is converted to an effective distance d M (i|n 0 ) = -ln(p(i|n 0 )) with n 0 as the outbreak country of the respective disease. The correlation results C(t A , d M ) with the arrival time t A (i) of the disease in the target country i are grouped by model (A) and by the disease (B). As comparison distances, the correlation of the geodesic, geodesic path (on the effective shortest path tree) and the effective distance with t A are shown. Each dot represents a correlation result of the 10 considered outbreaks (H1N1 in 2009, COVID-19 in 2020 and the spread of 8 of its variants in the years 2020-2022). For the analysis only those diseases/variants were used with more than 10 datapoints (see Table A in S1 Text.). Fig Q.</figDesc></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>PLOS Computational Biology | https://doi.org/10.1371/journal.pcbi.1011775January 24, 2024  </p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>Acknowledgments</head><p>We acknowledge <rs type="person">Marc Wiedermann</rs> for insightful comments.</p></div>
+			</div>
+			<div type="funding">
+<div><p>B.F.M received funding through Grant <rs type="grantNumber">CF20-0044</rs>, HOPE: How Democracies Cope with Covid-19, from the <rs type="funder">Carlsberg Foundation</rs> and was supported as an <rs type="grantName">Add-On Fellow for Interdisciplinary Life Science</rs> by the <rs type="funder">Joachim Herz Stiftung</rs>. P.P.K, A.Z, F.S received funding through Grant <rs type="grantNumber">D81870</rs>, <rs type="projectName">COVID-19 Lockdown-Monitor</rs>, from <rs type="funder">Germany's Federal Ministry of Health</rs>. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_sPEz7nq">
+					<idno type="grant-number">CF20-0044</idno>
+					<orgName type="grant-name">Add-On Fellow for Interdisciplinary Life Science</orgName>
+				</org>
+				<org type="funded-project" xml:id="_jTeG8cG">
+					<idno type="grant-number">D81870</idno>
+					<orgName type="project" subtype="full">COVID-19 Lockdown-Monitor</orgName>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The software "ImportRisk-v1.0.0" to compute the import risk is available under the Zenodo repository <ref type="url" target="https://doi.org/10.5281/zenodo.7852476">https://doi. org/10.5281/zenodo.7852476</ref>.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supporting information</head><p>S1 Text. Supplementary Note A: Origin-destination data ("Global Transnational Mobility Dataset"). Supplementary Note B: Symmetrized flows. Supplementary Note C: On the overestimation of low import probabilities. Supplementary Note D: Disease arrival time analysis. Table <ref type="table">A</ref>. Filtering criteria for the log-cases fit to extrapolate the arrival times t A . A country is excluded if (C0:) the detection is too sparse before peak-0 (less than 6 weeks of data), (C1:) the number of cases at peak-0 is below 30 (otherwise the signal is too noisy), (C2:) the extrapolated arrival time is before the WHO-outbreak date. N is the number of countries for which case data could be generated. N C0 and N C1 are the countries that pass criteria C0 and C1. N C0 &amp; C1 and N C0 &amp; C1 &amp; C2 are the numbers of countries that pass multiple criteria. Table <ref type="table">B</ref>. Disease and SARS-CoV-2 Variant outbreak information and WAN date. For each disease/variant the outbreak country and the date of the WAN used to compute the import probability estimates with the different models is displayed. Note that we only have the WAN from the years 2014 and 2019 in a yearly resolution and from 2020-2022 in monthly resolution. We repeated the analysis for COVID with the WAN from the month 2020-01-01, instead of using the yearly WAN from 2019, which gave comparable results. Fig A . Import probability dependence on the geographic distance (A), the effective distance (B) and the geographic path distance (C). The orange line represents the median and C(x, y) is the correlation between the two measures either log-transformed or not. The geographic distance between countries is averaged over all airport pairs. The geographic path distance is the geographic distance along the shortest path derived from the WAN using d eff , i.e. it is a combination of geographic and network information. The axis scale corresponds to the one with the highest correlation, i.e. log-log for distance and path distance (A, C) and y-log for the effective distance (B). For each gravity model with exponentially and power law decaying distance function and with one of the three different distance measures (geodesic distance, geodesic path distance and effective distance), the exponent γ or β that results in the best fit to the reference import risk is shown. The comparison is quantified via the correlation (corr), correlation between the log-transformed import risks (log_corr), root mean square error (rmse), root mean square error of the log-transformed import risks (log_rmse), Kendall rank correlation (kendalltau) and the common part of commuters (cpc). The mean optimal parameter for each model is marked by a horizontal line and their values are γ = [6.71, 6.41] * 10 -4 for geographic and geo. path distance and γ = 0.84 for the effective distance, and β = [1.90, 1, 95, 5.10] for geo., geo. path, and effective distance, respectively. </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Number of passenger cars and commercial vehicles in use worldwide from</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Carlier</surname></persName>
+		</author>
+		<ptr target="https://www.statista.com/statistics/281134/number-of-vehicles-in-use-worldwide/" />
+		<imprint>
+			<date type="published" when="2006">2006. 2015. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Container transport</title>
+		<ptr target="https://data.oecd.org/transport/container-transport.htm" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<publisher>OECD</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Global air traffic-scheduled passengers</title>
+		<ptr target="https://www.statista.com/statistics/564717/airline-industry-passenger-traffic-globally/" />
+		<imprint>
+			<date type="published" when="2004">2004-2022; 2023</date>
+		</imprint>
+		<respStmt>
+			<orgName>Statista Research Department</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Global trade networks determine the distribution of invasive non-native species</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chapman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">V</forename><surname>Purse</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">E</forename><surname>Roy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Bullock</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/geb.12599</idno>
+		<ptr target="https://doi.org/10.1111/geb.12599" />
+	</analytic>
+	<monogr>
+		<title level="j">Global Ecology and Biogeography</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="907" to="917" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Pandemic-related racial discrimination and its health impact among non-Indigenous racially minoritized peoples in high-income contexts: a systematic review</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Yashadhana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Derbas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Biles</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Grant</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Health Promotion International</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Epidemics and pandemics: their impacts on human history</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Hays</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>ABC-CLIO</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Fighting TB stigma: we need to apply lessons learnt from HIV activism</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Daftary</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Venkatesan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pai</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/bmjgh-2017-000515</idno>
+		<ptr target="https://doi.org/10.1136/bmjgh-2017-000515PMID" />
+	</analytic>
+	<monogr>
+		<title level="j">BMJ Global Health</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">29225954</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Pandemic Preparedness and Response -Lessons from the H1N1 Influenza of 2009</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">V</forename><surname>Fineberg</surname></persName>
+		</author>
+		<idno type="DOI">10.1056/NEJMra1208802</idno>
+		<idno type="PMID">24693893</idno>
+		<ptr target="https://doi.org/10.1056/NEJMra1208802" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<publisher>New England Journal of Medicine</publisher>
+			<biblScope unit="volume">370</biblScope>
+			<biblScope unit="page" from="1335" to="1342" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Pandemic Potential of a Strain of Influenza A (H1N1): Early Findings</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Fraser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Donnelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Cauchemez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">P</forename><surname>Hanage</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">D</forename><surname>Van Kerkhove</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">D</forename><surname>Hollingsworth</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1176062</idno>
+		<idno type="PMID">19433588</idno>
+		<ptr target="https://doi.org/10.1126/science.1176062" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">324</biblScope>
+			<biblScope unit="issue">5934</biblScope>
+			<biblScope unit="page" from="1557" to="1561" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Population flow drives spatio-temporal distribution of COVID-19 in China</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yuan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Christakis</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41586-020-2284-y</idno>
+		<idno type="PMID">32349120</idno>
+		<ptr target="https://doi.org/10.1038/s41586-020-2284-y" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">582</biblScope>
+			<biblScope unit="issue">7812</biblScope>
+			<biblScope unit="page" from="389" to="394" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Enhancing global preparedness during an ongoing pandemic from partial and noisy data</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Klamser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>'andrea</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Lauro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Zachariae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bontorin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Di</forename><surname>Nardo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename></persName>
+		</author>
+		<idno type="DOI">10.1093/pnasnexus/pgad192</idno>
+		<idno type="PMID">37351112</idno>
+		<ptr target="https://doi.org/10.1093/pnasnexus/pgad192" />
+	</analytic>
+	<monogr>
+		<title level="j">PNAS Nexus</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Nextstrain: real-time tracking of pathogen evolution</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Hadfield</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Megill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Huddleston</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Potter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Callender</surname></persName>
+		</author>
+		<idno type="DOI">10.1093/bioinformatics/bty407</idno>
+		<idno type="PMID">29790939</idno>
+		<ptr target="https://doi.org/10.1093/bioinformatics/bty407" />
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<biblScope unit="page" from="4121" to="4123" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Global Expansion of SARS-CoV-2 Variants of Concern: Dispersal Patterns and Influence of Air Travel. medRxiv</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Tegally</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Wilkinson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Brito</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Giovanetti</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2022.11.22.22282629</idno>
+		<idno type="PMID">36451885</idno>
+		<ptr target="https://doi.org/10" />
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">The Resilience of the Multirelational Structure of Geopolitical Treaties is Critically Linked to Past Colonial World Order and Offshore Fiscal Havens</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">L</forename><surname>Sacco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arenas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">De</forename><surname>Domenico</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename></persName>
+		</author>
+		<idno type="DOI">10.1155/2023/5280604</idno>
+		<ptr target="https://doi.org/10.1155/2023/5280604" />
+	</analytic>
+	<monogr>
+		<title level="j">Complexity</title>
+		<imprint>
+			<biblScope unit="volume">2023</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">World</forename><surname>Kissinger</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Order</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<publisher>Penguin Books</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">The Hidden Geometry of Complex, Network-Driven Contagion Phenomena</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brockmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Helbing</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.1245200</idno>
+		<idno type="PMID">24337289</idno>
+		<ptr target="https://doi.org/10.1126/science.1245200" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">342</biblScope>
+			<biblScope unit="issue">6164</biblScope>
+			<biblScope unit="page" from="1337" to="1342" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Effective distances for epidemics spreading on complex networks</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Iannelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Koher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brockmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Ho ¨vel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><forename type="middle">M</forename><surname>Sokolov</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.95.012313</idno>
+		<idno type="PMID">28208446</idno>
+		<ptr target="https://doi.org/10.1103/PhysRevE.95.012313" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">95</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">12313</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Arrival time statistics in global disease spread</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gautreau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barthe</surname></persName>
+		</author>
+		<idno>09):L09001-L09001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Mechanics: Theory and Experiment</title>
+		<imprint>
+			<date type="published" when="2007">2007. 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Global disease spread: Statistics and estimation of arrival times</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Gautreau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Barrat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barthe</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jtbi.2007.12.001</idno>
+		<idno type="PMID">18222486</idno>
+		<ptr target="https://doi.org/10.1016/j.jtbi.2007.12.001" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Theoretical Biology</title>
+		<imprint>
+			<biblScope unit="volume">251</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="509" to="522" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Impact of human mobility and networking on spread of COVID-19 at the time of the 1st and 2nd epidemic waves in Japan: An effective distance approach</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Nohara</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Manabe</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0272996</idno>
+		<idno type="PMID">35951674</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0272996" />
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">272996</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Predicting the international spread of Middle East respiratory syndrome (MERS)</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Otsuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Chowell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nishiura</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/s12879-016-1675-z</idno>
+		<idno type="PMID">27449387</idno>
+		<ptr target="https://doi.org/10.1186/s12879-016-1675" />
+	</analytic>
+	<monogr>
+		<title level="j">BMC Infectious Diseases</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">356</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Reduced Risk of Importing Ebola Virus Disease because of Travel Restrictions in 2014: A Retrospective Epidemiological Modeling Study</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Otsuki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nishiura</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0163418</idno>
+		<idno type="PMID">27657544</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0163418" />
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">163418</biblScope>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Estimating risks of importation and local transmission of Zika virus infection</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Nah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Mizumoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Miyamatsu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yasuda</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Kinoshita</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nishiura</surname></persName>
+		</author>
+		<idno type="DOI">10.7717/peerj.1904</idno>
+		<idno type="PMID">27069825</idno>
+		<ptr target="https://doi.org/10.7717/peerj.1904" />
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<date type="published" when="1904">2016. 1904</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Understanding components of mobility during the COVID-19 pandemic</title>
+		<author>
+			<persName><forename type="first">Edsberg</forename><surname>Møllgaard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lehmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Alessandretti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</title>
+		<imprint>
+			<biblScope unit="volume">380</biblScope>
+			<date type="published" when="2022">2022. 2214</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Assessing the spread of COVID-19 in Brazil: Mobility, morbidity and social vulnerability</title>
+		<author>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Coelho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">M</forename><surname>Lana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">G</forename><surname>Cruz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dam</forename><surname>Villela</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">S</forename><surname>Bastos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pastore Y Piontti</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0238214</idno>
+		<idno type="PMID">32946442</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0238214" />
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">238214</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Evaluating the impact of international airline suspensions on the early global spread of COVID-19. medRxiv</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Adiga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Venkatramanan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Schlitt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Peddireddy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Dickerman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bura</surname></persName>
+		</author>
+		<idno type="DOI">10.1101/2020.02.20.20025882</idno>
+		<idno type="PMID">32511466</idno>
+		<ptr target="https://doi.org/" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The P 1 P 2 D Hypothesis: On the Intercity Movement of Persons</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">K</forename><surname>Zipf</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/2087063</idno>
+		<ptr target="https://doi.org/10.2307/2087063" />
+	</analytic>
+	<monogr>
+		<title level="j">American Sociological Review</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">677</biblScope>
+			<date type="published" when="1946">1946</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">A unified framework for estimating or updating origin/destination matrices from traffic counts</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Cascetta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nguyen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0191-2615(88)90024-0</idno>
+		<ptr target="https://doi.org/10.1016/0191-2615(88)90024-0" />
+	</analytic>
+	<monogr>
+		<title level="j">Transportation Research Part B: Methodological</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="437" to="455" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">A Universal Model of Commuting Networks</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lenormand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Huet</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gargiulo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Deffuant</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0045985</idno>
+		<idno type="PMID">23049691</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0045985" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">45985</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Estimation of Origin-Destination Matrices Using Traffic Counts-A Literature Survey</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Abrahamsson</surname></persName>
+		</author>
+		<ptr target="https://pure.iiasa.ac.at/id/eprint/5627/" />
+		<imprint>
+			<date type="published" when="1998">1998</date>
+			<pubPlace>Laxenburg, Austria</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Human mobility: Models and applications</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Barbosa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Barthelemy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Ghoshal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">R</forename><surname>James</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lenormand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Louail</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.physrep.2018.01.001</idno>
+		<ptr target="https://doi.org/10.1016/j.physrep.2018.01.001" />
+	</analytic>
+	<monogr>
+		<title level="j">Physics Reports</title>
+		<imprint>
+			<biblScope unit="volume">734</biblScope>
+			<biblScope unit="page" from="1" to="74" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Multiscale mobility networks and the spatial spreading of infectious diseases</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Balcan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Colizza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gonc ¸alves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Ramasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vespignani</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.0906910106</idno>
+		<idno type="PMID">20018697</idno>
+		<ptr target="https://doi.org/10.1073/pnas.0906910106" />
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="issue">51</biblScope>
+			<biblScope unit="page" from="21484" to="21489" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Modeling the spatial spread of infectious diseases: The GLobal Epidemic and Mobility computational model</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Balcan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gonc ¸alves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Ramasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Colizza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vespignani</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jocs.2010.07.002</idno>
+		<idno type="PMID">21415939</idno>
+		<ptr target="https://doi.org/10.1016/j.jocs.2010.07.002" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Science</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="132" to="145" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Real-time numerical forecast of global epidemic spreading: case study of 2009 A/H1N1pdm</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Tizzoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Bajardi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Poletto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Ramasco</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Balcan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gonc ¸alves B</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1741-7015-10-165</idno>
+		<idno type="PMID">23237460</idno>
+		<ptr target="https://doi.org/10.1186/1741-7015-10-165" />
+	</analytic>
+	<monogr>
+		<title level="j">BMC Medicine</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">165</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Assessing the impact of travel restrictions on international spread of the 2014 West African Ebola epidemic</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Poletto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">F</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pastore Y Piontti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Rossi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Bioglio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">L</forename><surname>Chao</surname></persName>
+		</author>
+		<idno type="DOI">10.2807/1560-7917.es2014.19.42.20936</idno>
+		<idno type="PMID">25358040</idno>
+		<ptr target="https://doi.org/10.2807/1560-7917.es2014.19.42.20936" />
+	</analytic>
+	<monogr>
+		<title level="j">Eurosurveillance</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">42</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Assessment of the Middle East respiratory syndrome coronavirus (MERS-CoV) epidemic in the Middle East and risk of international spread using a novel maximum likelihood analysis approach</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Poletto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Pelat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Le</forename><surname>´vy-Bruhl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Yazdanpanah</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Boe ¨lle Py</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Colizza</surname></persName>
+		</author>
+		<idno type="DOI">10.2807/1560-7917.ES2014.19.23.20824</idno>
+		<idno type="PMID">24957746</idno>
+		<ptr target="https://doi.org/10.2807/1560-7917.ES2014.19.23.20824" />
+	</analytic>
+	<monogr>
+		<title level="j">Eurosurveillance</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">23</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">Critical regimes driven by recurrent mobility patterns of reaction-diffusion processes in networks</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Go ´mez-Gardeñes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Soriano-Paños</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arenas</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41567-017-0022-7</idno>
+		<idno>1038/s41567-017-0022-7</idno>
+		<ptr target="https://doi.org/10" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Physics</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="391" to="395" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Gravity versus radiation models: On the importance of scale and heterogeneity in commuting flows</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">P</forename><surname>Masucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Serras</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Johansson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Batty</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevE.88.022812</idno>
+		<idno type="PMID">24032888</idno>
+		<ptr target="https://doi.org/10.1103/PhysRevE.88.022812" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review E</title>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">22812</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Now Drives More Than Half Its Bookings Directly</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>O'neill</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Lufthansa</surname></persName>
+		</author>
+		<ptr target="https://skift.com/2019/03/14/lufthansa-now-drives-more-than-half-its-bookings-directly/" />
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Estimating Transnational Human Mobility on a Global Scale</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Recchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Deutschmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vespe</surname></persName>
+		</author>
+		<idno type="DOI">10.2139/ssrn.3384000</idno>
+		<ptr target="https://doi.org/10.2139/ssrn.3384000" />
+	</analytic>
+	<monogr>
+		<title level="j">SSRN Electronic Journal</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">The Predictive Capacity of Air Travel Patterns during the Global Spread of the COVID-19 Pandemic: Risk, Uncertainty and Randomness</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Christidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Christodoulou</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ijerph17103356</idno>
+		<idno type="PMID">32408602</idno>
+		<ptr target="https://doi.org/10.3390/ijerph17103356" />
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Environmental Research and Public Health</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">3356</biblScope>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Intervening Opportunities: A Theory Relating Mobility and Distance</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">A</forename><surname>Stouffer</surname></persName>
+		</author>
+		<idno type="DOI">10.2307/2084520</idno>
+		<ptr target="https://doi.org/10.2307/2084520" />
+	</analytic>
+	<monogr>
+		<title level="j">American Sociological Review</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">845</biblScope>
+			<date type="published" when="1940">1940</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">A universal model for mobility and migration patterns</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Simini</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gonza ´lez</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Maritan</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Baraba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Al</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature10856</idno>
+		<idno type="PMID">22367540</idno>
+		<ptr target="https://doi.org/10.1038/nature10856" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">484</biblScope>
+			<biblScope unit="issue">7392</biblScope>
+			<biblScope unit="page" from="96" to="100" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Path Flow and Trip Matrix Estimation Using Link Flow Density</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>De Grange</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Gonza ´lez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bekhor</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11067-016-9322-1</idno>
+		<ptr target="https://doi.org/10.1007/s11067-016-9322-1" />
+	</analytic>
+	<monogr>
+		<title level="j">Networks and Spatial Economics</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="173" to="195" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Estimating the Origin-Destination Matrix using link count observations from Unmanned Aerial Vehicles</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Englezou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Timotheou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">G</forename><surname>Panayiotou</surname></persName>
+		</author>
+		<ptr target="https://ieeexplore.ieee.org/document/9564959/" />
+	</analytic>
+	<monogr>
+		<title level="m">2021 IEEE International Intelligent Transportation Systems Conference (ITSC)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="3539" to="3544" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Official Airline Guide. OAG Global Airline Schedule Data</title>
+		<ptr target="https://www.oag.com/airline-schedules-data" />
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Global Transnational Mobility Dataset</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Recchi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Deutschmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Vespe</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.3911054</idno>
+		<ptr target="https://doi.org/10.5281/zenodo.3911054" />
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">K</forename><surname>Jordahl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">V</forename><surname>Den Bossche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Fleischmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wasserman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mcbride</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gerard</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.3946761</idno>
+		<ptr target="https://doi.org/10.5281/zenodo.3946761" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Modelling the scaling properties of human mobility</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Koren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Baraba</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Al</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nphys1760</idno>
+		<ptr target="https://doi.org/10.1038/nphys1760" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Physics</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="818" to="823" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<analytic>
+		<title level="a" type="main">The scaling laws of human travel</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brockmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hufnagel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Geisel</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature04292</idno>
+		<idno type="PMID">16437114</idno>
+		<ptr target="https://doi.org/10.1038/nature04292" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">439</biblScope>
+			<biblScope unit="issue">7075</biblScope>
+			<biblScope unit="page" from="462" to="465" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<analytic>
+		<title level="a" type="main">The universal visitation law of human mobility</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Schla ¨pfer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>'keeffe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Santi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Szell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+		<idno type="DOI">10.1038/s41586-021-03480-9</idno>
+		<ptr target="https://doi.org/10.1038/s41586-021-03480-9PMID" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">593</biblScope>
+			<biblScope unit="issue">7860</biblScope>
+			<biblScope unit="page">34040209</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<analytic>
+		<title level="a" type="main">A Tale of Many Cities: Universal Patterns in Human Urban Mobility</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Noulas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Scellato</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lambiotte</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pontil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Mascolo</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0037027</idno>
+		<idno type="PMID">22666339</idno>
+		<ptr target="https://doi.org/10.1371/journal.pone.0037027" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">37027</biblScope>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Unraveling the origin of exponential law in intra-urban human mobility</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Xu</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep02983</idno>
+		<idno type="PMID">24136012</idno>
+		<ptr target="https://doi.org/10.1038/srep02983" />
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">2983</biblScope>
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Systematic comparison of trip distribution laws and models</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Lenormand</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bassolas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">J</forename><surname>Ramasco</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jtrangeo.2015.12.008</idno>
+		<ptr target="https://doi.org/10.1016/j.jtrangeo.2015.12.008" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Transport Geography</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="158" to="169" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<analytic>
+		<title level="a" type="main">The infection tree of global epidemics</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pastore Y Piontti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mfdc</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Samay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Perra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Vespignani</surname></persName>
+		</author>
+		<idno type="DOI">10.1017/nws.2014.5</idno>
+		<ptr target="https://doi.org/10.1017/nws.2014.5" />
+	</analytic>
+	<monogr>
+		<title level="j">Network Science</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="132" to="137" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">Natural Human Mobility Patterns and Spatial Spread of Infectious Diseases</title>
+		<author>
+			<persName><forename type="first">V</forename><surname>Belik</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Geisel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brockmann</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/PhysRevX.1.011001</idno>
+		<ptr target="https://doi.org/10.1103/PhysRevX.1.011001" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review X</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">11001</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<analytic>
+		<title level="a" type="main">The COVID-19 pandemic</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ciotti</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ciccozzi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Terrinoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">C</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bernardini</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10408363.2020.1783198</idno>
+		<idno type="PMID">32645276</idno>
+		<ptr target="https://doi.org/10.1080/10408363" />
+	</analytic>
+	<monogr>
+		<title level="j">Critical Reviews in Clinical Laboratory Sciences</title>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="365" to="388" />
+			<date type="published" when="2020">2020. 2020. 1783198</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<analytic>
+		<title level="a" type="main">Dimension of spatially embedded networks</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Daqing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Kosmidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Bunde</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Havlin</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nphys1932</idno>
+		<ptr target="https://doi.org/10.1038/nphys1932" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Physics</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="481" to="484" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<analytic>
+		<title level="a" type="main">Limits of predictability in commuting flows in the absence of data for calibration</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Herrera</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Eagle</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gonza</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mc</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/srep05662</idno>
+		<idno type="PMID">25012599</idno>
+		<ptr target="https://doi.org/10.1038/srep05662" />
+	</analytic>
+	<monogr>
+		<title level="j">Scientific Reports</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">5662</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<analytic>
+		<title level="a" type="main">Predicting commuter flows in spatial networks using a radiation model based on temporal ranges</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ercsey-Ravasz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Gonza ´lez</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Mc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Toroczkai</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/ncomms6347</idno>
+		<idno type="PMID">25373437</idno>
+		<ptr target="https://doi.org/10.1038/ncomms6347" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Communications</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">5347</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<title level="m" type="main">Technical Advisory Group on SARS-CoV-2 Virus Evolution. Historical working definitions and primary actions for SARS-CoV-2 variants</title>
+		<ptr target="https://www.who.int/publications/m/item/historical-working-definitions-and-primary-actions-for-sars-cov-2-variants" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">FluNet as a tool for global monitoring of influenza on the Web</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Flahault</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Dias-Ferrao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Chaberty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Esteves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">J</forename><surname>Valleron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Lavanchy</surname></persName>
+		</author>
+		<idno type="DOI">10.1001/jama.280.15.1330</idno>
+		<idno type="PMID">9794312</idno>
+		<ptr target="https://doi.org/10.1001/jama.280.15" />
+	</analytic>
+	<monogr>
+		<title level="j">Jama</title>
+		<imprint>
+			<biblScope unit="volume">280</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="1330" to="1332" />
+			<date type="published" when="1330">1998. 1330</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title level="m" type="main">World Health Organization. WHO: Global Influenza Programme-FluNet</title>
+		<ptr target="https://www.who.int/tools/flunet" />
+		<imprint>
+			<date type="published" when="1997">1997</date>
+			<pubPlace>Geneva</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title level="m" type="main">World Health Organization. WHO COVID-19 Dashboard</title>
+		<ptr target="https://covid19.who.int/" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<pubPlace>Geneva</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<analytic>
+		<title level="a" type="main">disease and diplomacy: GISAID&apos;s innovative contribution to global health</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Elbe</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Buckland-Merrett</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Data</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/gch2.1018</idno>
+		<idno type="PMID">31565258</idno>
+		<ptr target="https://doi.org/10.1002/gch2.1018" />
+	</analytic>
+	<monogr>
+		<title level="j">Global challenges</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="33" to="46" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<analytic>
+		<title level="a" type="main">GISAID: Global initiative on sharing all influenza data-from vision to reality</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Shu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Mccauley</surname></persName>
+		</author>
+		<idno type="DOI">10.2807/1560-7917.ES.2017.22.13.30494</idno>
+		<idno type="PMID">28382917</idno>
+		<ptr target="https://doi.org/10.2807/1560-7917.ES.2017.22.13.30494" />
+	</analytic>
+	<monogr>
+		<title level="j">Eurosurveillance</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page">30494</biblScope>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<analytic>
+		<title level="a" type="main">GISAID&apos;s role in pandemic response</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Khare</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Gurry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Freitas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">B</forename><surname>Schultz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bach</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Diallo</surname></persName>
+		</author>
+		<idno type="DOI">10.46234/ccdcw2021.255</idno>
+		<idno type="PMID">34934514</idno>
+		<ptr target="https://doi.org/10.46234/ccdcw2021.255" />
+	</analytic>
+	<monogr>
+		<title level="j">China CDC Weekly</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">49</biblScope>
+			<biblScope unit="page">1049</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title/>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">F</forename><surname>Maier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">P</forename><surname>Klamser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zachariae</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Schlosser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Brockmann</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Importrisk</surname></persName>
+		</author>
+		<idno type="DOI">10.5281/zenodo.7852477</idno>
+		<ptr target="https://doi.org/10.5281/zenodo.7852477" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title level="m" type="main">The World Bank: GDP per capita</title>
+		<ptr target="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<publisher>World Bank</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
